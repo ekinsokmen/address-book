@@ -29,4 +29,9 @@ public class Person {
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
+
+    @Override
+    public String toString() {
+        return String.format("[%s, %s, %s]", fullName, gender, dateOfBirth);
+    }
 }
