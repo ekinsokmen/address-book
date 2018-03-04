@@ -13,8 +13,7 @@ public class GenderQueryServiceImpl implements GenderQueryService {
     }
 
     public long countByGender(Person.Gender gender) {
-        // TODO proper implementation using personRepository
-        return 3;
+        return personRepository.getAllPersons().stream().filter(p -> p.getGender().equals(gender)).count();
     }
 
 }

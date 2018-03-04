@@ -1,13 +1,13 @@
 package com.acme.addressbook.service;
 
 import com.acme.addressbook.data.PersonRepository;
+import com.acme.addressbook.data.PersonRepositoryHardCodedTestImpl;
 import com.acme.addressbook.model.Person;
 import com.acme.addressbook.service.impl.GenderQueryServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
 
 public class TestGenderQueryServiceImpl {
 
@@ -15,7 +15,7 @@ public class TestGenderQueryServiceImpl {
 
     @Before
     public void setup() {
-        PersonRepository personRepository = mock(PersonRepository.class);
+        PersonRepository personRepository = new PersonRepositoryHardCodedTestImpl();
         genderQueryService = new GenderQueryServiceImpl(personRepository);
     }
 
