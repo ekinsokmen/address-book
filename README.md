@@ -26,3 +26,9 @@ Run following commands to *ask the questions*:
 # How many days older is Bill than Paul?
 > mvn exec:java -Dexec.args="AddressBook ShowAgeDiffInDays Bill Paul"
 ```
+
+Parameter format:
+
+```
+-Dexec.args="<fileName> <commandName> <param1> <param2>"
+``` 
